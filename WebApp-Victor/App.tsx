@@ -7,9 +7,9 @@ import Stock from './components/Stock';
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-    <View style={styles.container}>
-      <Text style={{color: "#33c", fontSize: 42}}>Lager-Appen</Text>
-      <Image source={warehouse} style={{ width: 320, height: 240 }} />
+    <View style={styles.base}>
+      <Text style={{color: "#222", fontSize: 42, alignSelf: 'center'}}>Lager-Appen</Text>
+      <Image source={warehouse} style={styles.background} />
       <Stock />
       <StatusBar style="auto" />
     </View>
@@ -20,11 +20,17 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#535f66',
+  },
+  background: {
+    width: 405,
+    height: 240,
+    borderWidth: 2,
   },
   base: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#7b8f9b',
     paddingLeft: 12,
-    paddingRight: 12
+    paddingRight: 12,
   }
 });
